@@ -14,8 +14,8 @@ const FindUs = () => {
 
         {/* Input Form */}
         <div className="join mt-5">
-            <input className="input input-bordered bg-gray-200 join-item" placeholder="Email" />
-            <button className="btn join-item bg-[#228B22] text-white hover:bg-[#196519] rounded-r-lg">Subscribe</button>
+            <input className="input text-xs md:text-base input-bordered bg-gray-200 join-item" placeholder="Email" />
+            <button className="btn join-item bg-[#228B22] text-xs md:text-base  text-white hover:bg-[#196519] rounded-r-lg">Subscribe</button>
         </div>
       </div>
     </div>

@@ -1,5 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { IoMdLogIn } from "react-icons/io";
+
+import { FaUserEdit } from "react-icons/fa";
+
 
 const Navbar = () => {
 
@@ -18,7 +22,7 @@ const Navbar = () => {
             <div className="navbar max-w-screen-xl mx-auto">
   <div className="navbar-start ">
     <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+      <div tabIndex={0} role="button" className="btn px-1 btn-ghost text-[#228B22] lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-5 w-5"
@@ -38,15 +42,18 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="text-sm px-1 md:text-xl btn btn-ghost ">projectName</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-10">
       {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end flex gap-1 md:gap-2">
+    <a className="btn bg-[#228B22] border-none px-2 md:px-4 hover:bg-[#175c17] text-xs md:text-sm text-white"><FaUserEdit />
+    Register</a>
+    <a className="btn bg-[#228B22] border-none px-2 md:px-6 hover:bg-[#175c17] text-xs md:text-sm text-white"><IoMdLogIn />
+    Login</a>
   </div>
 </div>
         </div>
