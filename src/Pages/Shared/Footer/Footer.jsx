@@ -72,39 +72,23 @@ const Footer = () => {
 
                 </nav>
 
-                {/* email input section */}
-                <form>
-                    <h6 className="footer-title">Newsletter</h6>
-                    <fieldset className="form-control w-80">
-                    <label className="label">
-                        <span className="label-text text-white">Enter your email address</span>
-                    </label>
-                    <div className="join">
-                        <input
-                        type="text"
-                        placeholder="username@site.com"
-                        className="input input-bordered join-item" />
-                        <button className="btn bg-[#af025c] text-white border-none join-item hover:bg-[#79023f]">Subscribe</button>
-                    </div>
-                    </fieldset>
-                </form>
                 </footer>
 
-                {/* footer two */}
-                <footer className="footer-center bg-base-200 py-5 border-gray-500 border-t bg-gradient-to-r from-[#1B1B1D] via-[#272730] to-[#6E2B4E] text-white">
+               {/* footer two */}
+                    <footer className="footer-center bg-base-200 py-5 border-gray-500 border-t bg-gradient-to-r from-[#1B1B1D] via-[#272730] to-[#6E2B4E] text-white">
 
                     {/* social icons */}
                     <nav className='mb-4'>
-                        <div className="grid grid-flow-col gap-4">
-                        <a><FaSquareFacebook className='text-2xl md:text-3xl text-white'/></a>
+                        <div className="grid grid-flow-col gap-2 md:gap-4 justify-center">
+                            <a><FaSquareFacebook className='text-2xl md:text-3xl text-white'/></a>
 
-                        <a><FaSquareInstagram className='text-2xl md:text-3xl text-white'/></a>
+                            <a><FaSquareInstagram className='text-2xl md:text-3xl text-white'/></a>
 
-                        <a><IoLogoYoutube className='text-2xl md:text-3xl text-white'/></a>
+                            <a><IoLogoYoutube className='text-2xl md:text-3xl text-white'/></a>
 
-                        <a><IoLogoLinkedin className='text-2xl md:text-3xl text-white'/></a>
+                            <a><IoLogoLinkedin className='text-2xl md:text-3xl text-white'/></a>
 
-                        <a><IoLogoTwitter className='text-2xl md:text-3xl text-white'/></a>
+                            <a><IoLogoTwitter className='text-2xl md:text-3xl text-white'/></a>
                         </div>
                     </nav>
 
@@ -113,6 +97,7 @@ const Footer = () => {
                         <p className='text-xs md:text-sm'>Copyright © {new Date().getFullYear()} - All right reserved by Assignment-11 </p>
                     </aside>
                     </footer>
+
         </div>
     );
 };
