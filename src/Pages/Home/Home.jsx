@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import BannerCompo from './BannerCompo';
 import Latest from '../../Components/Latest';
+import FindUs from '../../Components/FindUs';
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             
             <BannerCompo></BannerCompo>
             <Latest></Latest>
+            <FindUs></FindUs>
         </div>
     );
 };
