@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { IoMdLogIn } from "react-icons/io";
 
 import { FaUserEdit } from "react-icons/fa";
@@ -50,10 +50,10 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end flex gap-1 md:gap-2">
-    <a className="btn bg-[#228B22] border-none px-2 md:px-4 hover:bg-[#175c17] text-xs md:text-sm text-white"><FaUserEdit />
-    Register</a>
-    <a className="btn bg-[#228B22] border-none px-2 md:px-6 hover:bg-[#175c17] text-xs md:text-sm text-white"><IoMdLogIn />
-    Login</a>
+    <Link to='/register' className="btn bg-[#228B22] border-none px-2 md:px-4 hover:bg-[#175c17] text-xs md:text-sm text-white"><FaUserEdit />
+    Register</Link>
+    <Link to='/login' className="btn bg-[#228B22] border-none px-2 md:px-6 hover:bg-[#175c17] text-xs md:text-sm text-white"><IoMdLogIn />
+    Login</Link>
   </div>
 </div>
         </div>
