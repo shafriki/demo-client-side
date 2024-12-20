@@ -7,15 +7,20 @@ import Lottie from 'lottie-react';
 import alienAnimation from '../../assets/spaceship.json'
 import emailiAmation from '../../assets/email.json'
 import lockAmation from '../../assets/lock.json'
+import { Link } from "react-router-dom";
 
 
 const Login = () => {
+    
+    // password toggle
     const [passwordVisible, setPasswordVisible] = useState(false);
 
+    // aos animation
     useEffect(() => {
         AOS.init();
     }, []);
 
+    // pass toggle
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
@@ -24,7 +29,7 @@ const Login = () => {
         <div className="relative min-h-screen bg-cover bg-center overflow-auto"
             style={{backgroundImage:"url('https://i.ibb.co.com/NjVGTZ0/18773518-6031991.jpg')"}}>
 
-            {/* bg black */}
+            {/* background opacity black */}
             <div className="absolute inset-0 bg-black bg-opacity-70 z-0"></div>
 
             <div className="flex flex-col md:flex-row justify-between items-center max-w-screen-lg mx-auto px-4 md:px-0 z-10 relative min-h-screen" data-aos="fade-down" data-aos-duration="1000">
@@ -50,7 +55,7 @@ const Login = () => {
                     
             </div>
 
-            {/* Form content */}
+            {/* form content */}
             <div className="w-full relative border-y-8 border-[#228B22] max-w-md p-8 bg-white bg-opacity-20 backdrop-blur-sm rounded-xl shadow-lg z-10 mb-10" data-aos="fade-down" data-aos-duration="1000">
                     
             <h2 className="text-3xl font-bold text-center text-white mb-2"> Welcome Back</h2>
@@ -79,35 +84,33 @@ const Login = () => {
                             </span>
                             <span className="absolute top-4 right-4" onClick={togglePasswordVisibility}>
                                 {
-                                    passwordVisible ? <FaEyeSlash className="text-gray-700" /> : <FaEye className="text-gray-700"  />
+                                    passwordVisible ? <FaEye className="text-gray-700"  /> : <FaEyeSlash className="text-gray-700" /> 
                                 }
                             </span>
                             <input type={passwordVisible ? "text" : "password"} name="password" className="block w-full px-10 py-3 text-gray-700 bg-white border rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-green-600 focus:border-green-400 dark:focus:border-green-300 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Enter Your Password" />
                         </div>
                         
+                        {/* email pass login button */}
                         <button className="w-full px-4 py-2 font-semibold text-white bg-gradient-to-r from-[#1B1B1D] via-[#272730] to-[#6E2B4E] hover:from-[#1B1B1D] hover:via-[#114811] transition duration-300 hover:to-[#228B22] ease-in-out btn border-none rounded-md">
-                            Login
-                        </button>
-
+                        Login</button>
                     </form>
+
+                    
                     <div className="flex items-center justify-center px-1 mt-2 pb-3">
                         <div className="flex-grow border-t border-gray-400"></div>
-                        <div className="mx-4 text-gray-500">Or Login with</div>
+                        <div className="mx-4 text-gray-500">Or</div>
                         <div className="flex-grow border-t border-gray-400"></div>
                     </div>
-
-                    <button
-                        type="button"
-                        className="w-full px-4 py-2 font-semibold text-white bg-gradient-to-r from-[#0334c8] via-[#023d84] to-[#07881c] hover:from-[#4d8823] hover:via-[#113e48] transition duration-300 hover:to-[#228B22] ease-in-out btn border-none rounded-md"
-                    >
-                        <FcGoogle className="text-2xl" /> Login with Google
+                    
+                    {/* google login button */}
+                    <button type="button" className="w-full px-4 py-2 font-semibold text-white bg-gradient-to-r from-[#0334c8] via-[#023d84] to-[#07881c] hover:from-[#4d8823] hover:via-[#113e48] transition duration-300 hover:to-[#228B22] ease-in-out btn border-none rounded-md"> <FcGoogle className="text-2xl" /> Login with Google
                     </button>
 
                     <p className="text-sm text-center text-white mt-1">
                         New Here?{" "}
-                        <a href="#" className="font-medium text-white hover:underline">
+                        <Link to='/register' className="font-medium text-white hover:underline">
                             Create an Account
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
